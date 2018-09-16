@@ -1,4 +1,4 @@
-# STAT 545 exploration repo
-Participation repo for STAT545
+# STAT 545 participation repository
+Participation repo for STAT545 (2018W) that contains the files from class activities
 
-Line added locally
+- All activities from each class are in a separate folder (eg files from the second class on Sept 6th are in cm002 folder)
