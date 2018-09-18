@@ -101,6 +101,8 @@ gapminder %>%
 
 2. Of those, only take data from Asia.
 
+
+
 ## git stuff (Optional)
 
 Knit, commit, push!
@@ -129,6 +131,16 @@ Your task is to use metaprogramming to check whether a response (like the one ab
 # Relational/Comparison and Logical Operators in R
 
 1. Find all entries of Canada and Algeria occuring in the '60s. 
+
+```{r}
+gapminder %>%
+  filter((country == "Canada" | country == "Algeria") & year >= 1960 & year < 1970)
+
+gapminder %>%
+  filter(country %in% c("Canada" , "Algeria"),
+         year >= 9160, year < 1970)
+```
+
 
 2. Find all entries of Canada, and entries of Algeria occuring in the '60s. 
 3. Find all entries _not_ including Canada and Algeria.
