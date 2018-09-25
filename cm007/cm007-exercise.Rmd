@@ -1,15 +1,16 @@
 ---
 title: "cm007 Exercises: Exploring Aesthetic Mappings"
-output: html_notebook
-editor_options: 
-  chunk_output_type: inline
+output: github_document
 ---
-
-
 
 # Beyond the x and y aesthetics
 
-Switch focus to exploring aesthetic mappings, instead of geoms. 
+Switch focus to exploring aesthetic mappings, instead of geoms.
+
+```{r}
+library("tidyverse")
+library("gapminder")
+```
 
 ## Shapes
 
@@ -20,6 +21,20 @@ Switch focus to exploring aesthetic mappings, instead of geoms.
 
 List of shapes can be found [at the bottom of the `scale_shape` documentation](https://ggplot2.tidyverse.org/reference/scale_shape.html).
 
+```{r}
+gvsl <- ggplot(gapminder, aes(gdpPercap, lifeExp)) +
+  scale_x_log10()
+gvsl + geom_point(aes(shape=continent), alpha=0.2) #when in aes need to specify a varible
+```
+
+```{r}
+gvsl + geom_point(shape = 7)
+gvsl + geom_point(pch = 7)
+gvsl + geom_point(shape = "$")
+```
+
+
+
 ## Colour
 
 Make a scatterplot. Then:
@@ -29,23 +44,55 @@ Make a scatterplot. Then:
 - Try colour as numeric variable.
     - Try `trans="log10"` for log scale.
 
+```{r}
+gvsl + geom_point(aes(colour=continent))
+gvsl + geom_point(aes(colour=pop)) + scale_colour_continuous(trans="log10")
+gvsl + geom_point(aes(colour=lifeExp > 60))
+```
+
 
 Make a line plot of `gdpPercap` over time for all countries. Colour by `lifeExp > 60` (remember that `lifeExp` looks bimodal?)
 
 
 Try adding colour to a histogram. How is this different?
 
+```{r}
+ggplot(gapminder, aes(lifeExp)) + 
+  geom_histogram(aes(fill=continent))
+```
+
+
 ## Facetting
 
 Make histograms of `gdpPercap` for each continent. Try the `scales` and `ncol` arguments. 
 
+```{r}
+ggplot(gapminder, aes(lifeExp)) +
+  facet_wrap(~ continent, scales = "free_x") +
+  geom_histogram()
+```
+
 Remove Oceania. Add another variable: `lifeExp > 60`. 
+
+```{r}
+ggplot(gapminder, aes(gdpPercap)) +
+  facet_grid( continent ~ lifeExp > 60) +
+  geom_histogram()
+```
+
 
 ## Bubble Plots
 
 - Add a `size` aesthetic to a scatterplot. What about `cex`?
 - Try adding `scale_radius()` and `scale_size_area()`. What's better?
 - Use `shape=21` to distinguish between `fill` (interior) and `colour` (exterior).
+
+```{r}
+gvsl + geom_point(aes(size=pop), alpha=0.2) +
+  scale_size_area()
+gvsl + geom_point(aes(size=pop, fill = continent), shape = 21, colour = "black", alpha = 0.2)
+```
+
 
 ## "Complete" plot
 
@@ -55,6 +102,11 @@ Let's try plotting much of the data.
 - facet by year
 - colour by continent
 
+```{r}
+gvsl + geom_point(aes(size=pop, colour=continent)) + 
+  scale_size_area() +
+  facet_wrap(~year)
+```
 
 
 # Continue from last time (geom exploration with `x` and `y` aesthetics)
