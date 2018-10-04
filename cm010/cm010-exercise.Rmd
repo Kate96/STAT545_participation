@@ -246,7 +246,7 @@ bind_rows(flights2, weather)
 
 ```{r}
 (p <- tibble(x1 = c("A", "A", "B"), x2 = 2:4))
-(q <- tibble(x1 = c("Z", "Y", "X"), x3 = 10:12))
+(q <- tibble(x1 = c("A", "B", "X"), x3 = 10:12))
 left_join(p, q)
 left_join(q, p)
 ```

@@ -396,10 +396,10 @@ union(y, z)
     ## # A tibble: 4 x 2
     ##   x1       x2
     ##   <chr> <int>
-    ## 1 A         1
-    ## 2 D         4
-    ## 3 C         3
-    ## 4 B         2
+    ## 1 D         4
+    ## 2 B         2
+    ## 3 A         1
+    ## 4 C         3
 
 ### example for `setdiff`: Rows that appear in `y` but not `z`. **Caution:** `setdiff` for `y` to `z` and `z` to `y` are different.
 
@@ -610,14 +610,14 @@ bind_rows(flights2, weather)
     ## 3 B         4
 
 ``` r
-(q <- tibble(x1 = c("Z", "Y", "X"), x3 = 10:12))
+(q <- tibble(x1 = c("A", "B", "X"), x3 = 10:12))
 ```
 
     ## # A tibble: 3 x 2
     ##   x1       x3
     ##   <chr> <int>
-    ## 1 Z        10
-    ## 2 Y        11
+    ## 1 A        10
+    ## 2 B        11
     ## 3 X        12
 
 ``` r
@@ -629,9 +629,9 @@ left_join(p, q)
     ## # A tibble: 3 x 3
     ##   x1       x2    x3
     ##   <chr> <int> <int>
-    ## 1 A         2    NA
-    ## 2 A         3    NA
-    ## 3 B         4    NA
+    ## 1 A         2    10
+    ## 2 A         3    10
+    ## 3 B         4    11
 
 ``` r
 left_join(q, p)
@@ -639,9 +639,10 @@ left_join(q, p)
 
     ## Joining, by = "x1"
 
-    ## # A tibble: 3 x 3
+    ## # A tibble: 4 x 3
     ##   x1       x3    x2
     ##   <chr> <int> <int>
-    ## 1 Z        10    NA
-    ## 2 Y        11    NA
-    ## 3 X        12    NA
+    ## 1 A        10     2
+    ## 2 A        10     3
+    ## 3 B        11     4
+    ## 4 X        12    NA
