@@ -12,3 +12,4 @@ Participation repo for STAT545 (2018W) that contains the files from class activi
 - [cm008 Sept 27th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm008)
 - [cm009 Oct 2nd 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm009)
 - [cm010 Oct 4th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm010)
+- [cm011 Oct 9th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm011)
