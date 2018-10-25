@@ -1,6 +1,7 @@
-# STAT 545 participation repository 
-Participation repo for STAT545 (2018W) that contains the files from class activities (author: Kate Tyshchenko)
+# STAT 545/547 participation repository 
+Participation repo for STAT545/547 (2018W) that contains the files from class activities (author: Kate Tyshchenko)
 
+### STAT 545:
 - [cm002 Sept 6th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm002)
 - [cm003 Sept 11th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm003)
 - [cm004 Sept 13th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm004)
@@ -14,3 +15,6 @@ Participation repo for STAT545 (2018W) that contains the files from class activi
 - [cm012 Oct 11th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm012)
 - [cm013 Oct 16th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm013)
 - [cm014 Oct 18th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm014)
+
+### STAT 547:
+- [cm102 Oct 25th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm102)
