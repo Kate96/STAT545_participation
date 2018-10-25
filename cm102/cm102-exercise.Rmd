@@ -1,6 +1,6 @@
 ---
 title: "STAT 547 Class Meeting 02 Worksheet"
-output: github_document
+output: html_document
 ---
 
 ```{r}
@@ -188,7 +188,7 @@ countries <- levels(gapminder$country)
 Find all countries in the gapminder data set with the following pattern: "i", followed by any single character, followed by "a":
 
 ```{r}
-str_subset(countries, pattern = "i.a")
+str_subset(countries, pattern = "i.a") #case sensitive
 ```
 
 Here, `.` stands for "any single character".
@@ -205,8 +205,8 @@ str_view_all(countries, pattern = "i.a", match=TRUE)
 Exercise: Canada isn't the only country with three interspersed "a"'s. Find the others. Try both `str_view_all()` and `str_subset()`.
 
 ```{r}
-str_view_all(FILL_THIS_IN)
-str_subset(FILL_THIS_IN)
+str_view_all(countries, pattern = "a.a.a", match=T)
+str_subset(countries, pattern="a.a.a")
 ```
 
 
@@ -247,7 +247,7 @@ Note that not all special characters "work" within `[]`, but some do, and do not
 Exercise: Find all countries with three non-vowels next to each other.
 
 ```{r}
-str_view_all_match(countries, pattern = "YOUR_REGEX_HERE")
+str_view_all_match(countries, pattern = "[^aeiou][^aeiou][^aeiou]")
 ```
 
 
@@ -278,7 +278,7 @@ See list at https://r4ds.had.co.nz/strings.html#repetition
 Find all countries that have any number of o's (but at least 1) following r:
 
 ```{r}
-str_view_all_match(countries, "re+")
+str_view_all_match(countries, "ro+")
 ```
 
 
@@ -292,7 +292,7 @@ str_view_all_match(countries, "e{2}")
 Exercise: Find all countries that have either "a" or "e", twice in a row (with a changeover allowed, such as "ae" or "ea"):
 
 ```{r}
-str_view_all_match(countries, pattern="YOUR_REGEX_HERE")
+str_view_all_match(countries, pattern="(e|a){2}")
 ```
 
 
@@ -317,7 +317,7 @@ str_view_all_match(countries, pattern = "^Ca")
 Countries without a vowel? The word should start with a non-vowel, continue as a non-vowel, and end:
 
 ```{r}
-str_view_all_match(countries, "^[^aeiouAEIOU]*$")
+str_view_all_match(countries, "^[^aeiouAEIOU]*$") #*=0 or more non-vowels till the end of the string ie repear a non-vowel as many times as necessary till the end of the word
 ```
 
 ### Groups
@@ -325,7 +325,7 @@ str_view_all_match(countries, "^[^aeiouAEIOU]*$")
 We can refer to parentheses groups:
 
 ```{r}
-str_view_all(c("abad", "abbd"), pattern="(a)(b)\\1")
+str_view_all(c("abad", "abbd"), pattern="(a)(b)\\1") #whatever was resolved in group 1 - a, then b and then group 1 which is a
 str_view_all(c("abad", "abbd"), pattern="(a)(b)\\2")
 ```
 
@@ -338,7 +338,7 @@ str_view_all(c("bananas"), "(.)(.)\\1\\2.*\\1\\2")
 We can refer to them later in the search, too:
 
 ```{r}
-str_view_all(c("bananas", "Who can? Bananas can."), "(.)(.)\\1\\2.*\\1\\2")
+str_view_all(c("bananas", "Who can? Bananas can."), "(.)(.)\\1\\2.*\\1\\2") #first group reolves to a, 2nd to n b/c that is the one that works
 ```
 
 
@@ -354,7 +354,7 @@ Convert `words` to pig latin, which involves:
     - Use `str_c()`.
     
 ```{r}
-YOUR_CODE_HERE
+#YOUR_CODE_HERE
 ```
 
 Find all countries that end in "y"
