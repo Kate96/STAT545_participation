@@ -20,4 +20,4 @@ Participation repo for STAT545/547 (2018W) that contains the files from class ac
 - [cm102 Oct 25th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm102)
 - [cm103 Oct 30th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm103)
 - [cm104 Nov 1st 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm104)
-- [cm105 Nov 6th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm105)
+- cm105 Nov 6th 2018 - building an R package, can't push (nested)
