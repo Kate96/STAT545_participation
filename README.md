@@ -22,3 +22,4 @@ Participation repo for STAT545/547 (2018W) that contains the files from class ac
 - [cm104 Nov 1st 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm104)
 - [cm105/106 Nov 6th/8th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm105_106) (NB: couldn't push on Nov 6th b/c nested repos)
 - [cm107/108 Nov 13th/15th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm107_108) (NB: I missed cm107 so I took the notes from that class from Vincenzo's repository; cm108 work is below that in the same R file)
+- [cm109 Nov 20th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm109/cm109-automation_examples)
