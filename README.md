@@ -25,4 +25,5 @@ Participation repo for STAT545/547 (2018W) that contains the files from class ac
 - [cm109 Nov 20th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm109/cm109-automation_examples)
 - [cm110 Nov 22nd 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm110/word_histogram)
 - [cm111 Nov 27th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm111)
+- [cm112 Nov 29th 2018](https://github.com/Kate96/STAT545_participation/tree/master/cm112)
 
